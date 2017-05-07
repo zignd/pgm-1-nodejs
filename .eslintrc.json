@@ -1,0 +1,31 @@
+{
+    "env": {
+        "commonjs": true,
+        "es6": true,
+        "node": true
+    },
+    "globals": {
+        "log": true,
+        "describe": true,
+        "it": true
+    },
+    "parserOptions": {
+        "sourceType": "module",
+        "ecmaVersion": 8
+    },
+    "rules": {
+        "no-this-before-super": "warn",
+        "no-undef": "warn",
+        "no-unreachable": "warn",
+        "no-unused-vars": "warn",
+        "constructor-super": "warn",
+        "valid-typeof": "warn",
+        "prefer-const": [
+            "warn",
+            {
+                "destructuring": "any"
+            }
+        ],
+        "semi": "error"
+    }
+}

@@ -1,0 +1,10 @@
+#! /bin/bash
+
+dir="$HOME/.local/share/pgm-1-nodejs"
+if [ ! -d "$HOME/.local/share/pgm-1-nodejs" ]; then
+    mkdir "$dir"
+fi
+
+cp config_files/* "$dir"
+
+echo "Configuration files successfully installed."

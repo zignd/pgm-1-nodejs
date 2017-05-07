@@ -1,0 +1,35 @@
+{
+  "name": "pgm-1-nodejs",
+  "version": "0.1.0",
+  "description": "",
+  "main": "/src/index.js",
+  "scripts": {
+    "install": "./bin/install",
+    "start": "node src/index.js | node_modules/bunyan/bin/bunyan",
+    "test": "node_modules/mocha/bin/mocha --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zignd/pgm-1-nodejs.git"
+  },
+  "author": "Zignd",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zignd/pgm-1-nodejs/issues"
+  },
+  "homepage": "https://github.com/zignd/pgm-1-nodejs#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.3.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "bunyan": "^1.8.10",
+    "express": "^4.15.2",
+    "request": "^2.81.0",
+    "request-promise": "^4.2.0",
+    "sequelize": "^3.30.4",
+    "sqlite3": "^3.1.8",
+    "verror": "^1.10.0"
+  }
+}
