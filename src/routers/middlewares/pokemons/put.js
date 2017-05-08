@@ -19,20 +19,18 @@ async function validation(req, res, next) {
         price: req.params.price,
         stock: req.params.stock
     };
-    Joi.validate(pokemon, pokemonSchema, { abortEarly: false }, (err) => {
-        if (err) {
-            err = {
-                code: resMsgs.ValidationError.code,
-                message: resMsgs.ValidationError.message,
-                details: err.details
-            };
 
-            return res.status(400).send(err);
-        }
+    const result = Joi.validate(pokemon, pokemonSchema, { abortEarly: false });
+    if (result.error) {
+        return res.status(400).send({
+            code: resMsgs.ValidationError.code,
+            message: resMsgs.ValidationError.message,
+            details: result.error.details
+        });
+    }
 
-        req.pokemon = pokemon;
-        return next();
-    });
+    req.pokemon = pokemon;
+    return next();
 }
 
 async function handler(req, res) {
