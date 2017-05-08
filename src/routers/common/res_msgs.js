@@ -14,5 +14,9 @@ module.exports = {
     PurchaseRefused: {
         code: 'PurchaseRefused',
         message: 'Purchase refused. Check the provided credit card informations.'
+    },
+    ValidationError: {
+        code: 'ValidationError',
+        message: 'Invalid arguments were provided. Check the details property for more information.'
     }
 };

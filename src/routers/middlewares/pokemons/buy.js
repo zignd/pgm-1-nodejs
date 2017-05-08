@@ -2,7 +2,6 @@
 
 const config = require('../../../services/config');
 
-const express = require('express');
 const request = require('request-promise');
 const VError = require('verror');
 
@@ -75,7 +74,7 @@ async function handler(req, res) {
                 request: req
             }
         }, 'failed to conclude the purchase'));
-        res.status(500).send({
+        return res.status(500).send({
             code: resMsgs.UnexpectedError.code,
             message: resMsgs.UnexpectedError.message
         });
